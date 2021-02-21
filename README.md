@@ -2,7 +2,7 @@
 
 This repository is for administrators (conmasters) of the Connetome LAB server.   
 This code shows the result of synthesizing the real-time account registration status (/etc/passwd) of each server (gateway, master, node1, node2, storage).   
-And, only account information belonging to Connectome Lab with UID from 10000 to 19999 is displayed.   
+And, only account information belonging to Connectome Lab with UID from 10000 to 19999 or  is displayed.   
 Currently (2020/2/22), the administrator's RSA key is not registered, so the administrator must enter the password every time.   
 If you register the RAS key later, you can see the result with just a shell command.
 
