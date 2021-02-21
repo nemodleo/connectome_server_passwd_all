@@ -83,3 +83,5 @@ for ((i=1;i<=num_rows;i++)) do
     printf "%s" ${matrix[$i,$num_columns]}
     echo
 done
+
+rm ~/server_management/passwd/summary_*
