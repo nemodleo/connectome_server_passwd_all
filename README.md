@@ -14,6 +14,10 @@ If you register the RAS key later, you can see the result with just a shell comm
 conmaster@gateway:~/server_management$ ./server_user_status.sh 
 ~~~
 
+Realtime (Useable after ssh key registered)
+~~~Bash
+conmaster@gateway:~/server_management$ watch -n 5 ./server_user_status.sh 
+~~~
 
 ### Result
 ~~~Bash
