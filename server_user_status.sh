@@ -1,11 +1,12 @@
 #!/bin/bash
+sudoPW=$1
 
 # File Loading
 rm ~/server_management/passwd/passwd_file/passwd_*
 cp /etc/passwd ~/server_management/passwd/passwd_file/passwd_gateway_$(date "+%Y:%m:%d|%H:%M:%S")
 nodes="master node1 node2 storage"
 for node in $nodes; do
-  scp $node:/etc/passwd ~/server_management/passwd/passwd_file/passwd_${node}_$(date "+%Y:%m:%d|%H:%M:%S")
+	sshpass -p $sudoPW scp $node:/etc/passwd ~/server_management/passwd/passwd_file/passwd_${node}_$(date "+%Y:%m:%d|%H:%M:%S")
 done
 
 
@@ -24,7 +25,7 @@ rm ~/server_management/passwd/summary_passwd_tmp ~/server_management/passwd/summ
 
 # To Matrix
 declare -A matrix
-num_rows=$(awk '{print $1}' ~/server_management/passwd/summary_passwd_sorted | sort | uniq | wc -l)
+num_rows=$(awk '{print $2}' ~/server_management/passwd/summary_passwd_sorted | sort | uniq | wc -l)
 num_columns=6
 
 for ((i=1;i<=num_rows;i++)) do
