@@ -24,7 +24,7 @@ rm ~/server_management/passwd/summary_passwd_tmp ~/server_management/passwd/summ
 
 # To Matrix
 declare -A matrix
-num_rows=$(awk '{print $1}' ~/server_management/passwd/summary_passwd_sorted | sort | uniq | wc -l)
+num_rows=$(awk '{print $2}' ~/server_management/passwd/summary_passwd_sorted | sort | uniq | wc -l)
 num_columns=6
 
 for ((i=1;i<=num_rows;i++)) do
