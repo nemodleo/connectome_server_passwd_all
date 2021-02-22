@@ -59,7 +59,7 @@ do
     fi
     matrix[$tmp_index,${matrix_node[$node]}]='O'
     tmp_account=$account
-done < ~/server_management/passwd/summary_passwd_tmp_sorted
+done < ~/server_management/passwd/summary_passwd_sorted
 matrix[$tmp_index,6]=$tmp_account
 
 
