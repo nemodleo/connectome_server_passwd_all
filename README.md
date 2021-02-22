@@ -6,17 +6,18 @@ And, only account information belonging to Connectome Lab with UID from 10000 to
 Currently (2020/2/22), the administrator's RSA key is not registered, so the administrator must enter the password every time.   
 If you register the RAS key later, you can see the result with just a shell command.
 
-
+### Prepared
+sshpass
 
 ### Run
 
 ~~~Bash
-conmaster@gateway:~/server_management$ ./server_user_status.sh 
+conmaster@gateway:~/server_management$ ./server_user_status.sh {conmaster_pw}
 ~~~
 
-Realtime (Useable after ssh key registered)
+Realtime (minimum time 5)
 ~~~Bash
-conmaster@gateway:~/server_management$ watch -n 5 ./server_user_status.sh 
+conmaster@gateway:~/server_management$ watch -n 5 ./server_user_status.sh  {conmaster_pw}
 ~~~
 
 ### Result
