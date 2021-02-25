@@ -5,7 +5,8 @@ rm ~/server_management/passwd/passwd_file/passwd_*
 cp /etc/passwd ~/server_management/passwd/passwd_file/passwd_gateway_$(date "+%Y:%m:%d|%H:%M:%S")
 nodes="master node1 node2 storage"
 for node in $nodes; do
-  scp $node:/etc/passwd ~/server_management/passwd/passwd_file/passwd_${node}_$(date "+%Y:%m:%d|%H:%M:%S")
+	ssh -A $node "cat /etc/passwd" > ~/server_management/passwd/passwd_file/passwd_${node}_$(date "+%Y:%m:%d|%H:%M:%S")
+	#scp $node:/etc/passwd ~/server_management/passwd/passwd_file/passwd_${node}_$(date "+%Y:%m:%d|%H:%M:%S")
 done
 
 
