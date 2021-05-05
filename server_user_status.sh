@@ -2,6 +2,7 @@
 
 # File Loading
 rm ~/server_management/passwd/passwd_file/passwd_*
+mkdir -p ~/server_management/passwd/passwd_file
 cp /etc/passwd ~/server_management/passwd/passwd_file/passwd_gateway_$(date "+%Y:%m:%d|%H:%M:%S")
 nodes="master node1 node2 storage"
 for node in $nodes; do
